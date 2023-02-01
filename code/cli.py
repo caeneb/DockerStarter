@@ -13,7 +13,7 @@ logging_config = dict(
     handlers={
         'f': {
             'class': 'logging.FileHandler', 'formatter': 'f', 'level': logging.INFO,
-            'filename': f'/bind/log/{datetime.datetime.now().isoformat().replace(":", "_")}.log', 'mode': 'a'
+            'filename': f'/bind/logs/{datetime.datetime.now().isoformat().replace(":", "_")}.log', 'mode': 'a'
         },
         'c': {'class': 'logging.StreamHandler', 'formatter': 'c', 'level': logging.DEBUG},
     },

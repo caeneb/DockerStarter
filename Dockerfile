@@ -1,6 +1,8 @@
 FROM python:3.8-slim-bullseye
 
-RUN apt-get update
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git ; \
+    rm -rd /var/lib/apt/lists
 
 COPY ./requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
